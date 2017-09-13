@@ -1,0 +1,869 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "beego Test API",
+        "description": "beego has a very cool tools to autogenerate documents for your API",
+        "version": "1.0.0",
+        "termsOfService": "http://beego.me/",
+        "contact": {
+            "email": "astaxie@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/actainicio/": {
+            "get": {
+                "tags": [
+                    "actainicio"
+                ],
+                "description": "get all objects",
+                "operationId": "ActainicioController.GetAll",
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.Actainicio"
+                        }
+                    },
+                    "403": {
+                        "description": ":objectId is empty"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "actainicio"
+                ],
+                "description": "Crear Actainicio",
+                "operationId": "ActainicioController.Crear Actainicio",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Body para la creacion de Actainicio",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Actainicio"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{int} Actainicio.Id"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/actainicio/{contrato}/{vigencia}": {
+            "get": {
+                "tags": [
+                    "actainicio"
+                ],
+                "description": "get Actainicio by vigencia",
+                "operationId": "ActainicioController.Get Contrato Vigencia",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "contrato",
+                        "description": "El contrato del Actainicio a consultar",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "vigencia",
+                        "description": "La vigencia del contrato del Actainicio a consultar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.Actainicio"
+                        }
+                    },
+                    "403": {
+                        "description": ":uid is empty"
+                    }
+                }
+            }
+        },
+        "/actainicio/{objectId}": {
+            "get": {
+                "tags": [
+                    "actainicio"
+                ],
+                "description": "get Actainicio by objectId",
+                "operationId": "ActainicioController.Get",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "El Id de la Actainicio a consultar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.Actainicio"
+                        }
+                    },
+                    "403": {
+                        "description": ":uid is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "actainicio"
+                ],
+                "description": "update the Actainicio",
+                "operationId": "ActainicioController.Update",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "The objectid you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.Object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/.Object"
+                        }
+                    },
+                    "403": {
+                        "description": ":objectId is empty"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "actainicio"
+                ],
+                "description": "Borrar Actainicio",
+                "operationId": "ActainicioController.Borrar Actainicio",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "El ObjectId del objeto que se quiere borrar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} ok"
+                    },
+                    "403": {
+                        "description": "objectId is empty"
+                    }
+                }
+            }
+        },
+        "/novedad/": {
+            "get": {
+                "tags": [
+                    "novedad"
+                ],
+                "description": "get all objects",
+                "operationId": "NovedadController.GetAll",
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.Novedad"
+                        }
+                    },
+                    "403": {
+                        "description": ":objectId is empty"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "novedad"
+                ],
+                "description": "Crear Novedad",
+                "operationId": "NovedadController.Crear Novedad",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Body para la creacion de Novedad",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Novedad"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{int} Novedad.Id"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/novedad/{contrato}/{vigencia}": {
+            "get": {
+                "tags": [
+                    "novedad"
+                ],
+                "description": "get Novedad by vigencia",
+                "operationId": "NovedadController.Get Contrato Vigencia",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "contrato",
+                        "description": "El contrato de la Novedad a consultar",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "vigencia",
+                        "description": "La vigencia del contrato de la Novedad a consultar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.Novedad"
+                        }
+                    },
+                    "403": {
+                        "description": ":uid is empty"
+                    }
+                }
+            }
+        },
+        "/novedad/{contrato}/{vigencia}/{tiponovedad}": {
+            "get": {
+                "tags": [
+                    "novedad"
+                ],
+                "description": "get Novedad by contrato vigencia tiponovedad",
+                "operationId": "NovedadController.Get Contrato Vigencia tiponovedad",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "contrato",
+                        "description": "El contrato de la Novedad a consultar",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "vigencia",
+                        "description": "La vigencia del contrato de la Novedad a consultar",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "path",
+                        "name": "tiponovedad",
+                        "description": "El tipo de la Novedad a consultar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.Novedad"
+                        }
+                    },
+                    "403": {
+                        "description": ":uid is empty"
+                    }
+                }
+            }
+        },
+        "/novedad/{objectId}": {
+            "get": {
+                "tags": [
+                    "novedad"
+                ],
+                "description": "get Novedad by objectId",
+                "operationId": "NovedadController.Get",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "El objectId de la Novedad a consultar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.Novedad"
+                        }
+                    },
+                    "403": {
+                        "description": ":uid is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "novedad"
+                ],
+                "description": "update the Novedad",
+                "operationId": "NovedadController.Update",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "The objectid you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.Object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/.Object"
+                        }
+                    },
+                    "403": {
+                        "description": ":objectId is empty"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "novedad"
+                ],
+                "description": "Borrar Novedad",
+                "operationId": "NovedadController.Borrar Novedad",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "El ObjectId del objeto que se quiere borrar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} ok"
+                    },
+                    "403": {
+                        "description": "objectId is empty"
+                    }
+                }
+            }
+        },
+        "/plantilladocumento/": {
+            "get": {
+                "tags": [
+                    "plantilladocumento"
+                ],
+                "description": "get all objects",
+                "operationId": "PlantillaDocumentoController.GetAll",
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.PlantillaDocumento"
+                        }
+                    },
+                    "403": {
+                        "description": ":objectId is empty"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "plantilladocumento"
+                ],
+                "description": "Crear PlantillaDocumento",
+                "operationId": "PlantillaDocumentoController.Crear PlantillaDocumento",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Body para la creacion de PlantillaDocumento",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PlantillaDocumento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{int} PlantillaDocumento.Id"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/plantilladocumento/{objectId}": {
+            "get": {
+                "tags": [
+                    "plantilladocumento"
+                ],
+                "description": "get PlantillaDocumento by objectId",
+                "operationId": "PlantillaDocumentoController.Get",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "El id de la PlantillaDocumento a consultar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.PlantillaDocumento"
+                        }
+                    },
+                    "403": {
+                        "description": ":uid is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "plantilladocumento"
+                ],
+                "description": "update the PlantillaDocumento",
+                "operationId": "PlantillaDocumentoController.Update",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "The objectid you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.Object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/.Object"
+                        }
+                    },
+                    "403": {
+                        "description": ":objectId is empty"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "plantilladocumento"
+                ],
+                "description": "Borrar PlantillaDocumento",
+                "operationId": "PlantillaDocumentoController.Borrar PlantillaDocumento",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "El ObjectId del objeto que se quiere borrar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} ok"
+                    },
+                    "403": {
+                        "description": "objectId is empty"
+                    }
+                }
+            }
+        },
+        "/tiponovedad/": {
+            "get": {
+                "tags": [
+                    "tiponovedad"
+                ],
+                "description": "get all objects",
+                "operationId": "TiponovedadController.GetAll",
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.Tiponovedad"
+                        }
+                    },
+                    "403": {
+                        "description": ":objectId is empty"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "tiponovedad"
+                ],
+                "description": "Crear Tiponovedad",
+                "operationId": "TiponovedadController.Post Tiponovedad",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Body para la creacion de Tiponovedad",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Tiponovedad"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{int} Tiponovedad.Id"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/tiponovedad/{objectId}": {
+            "get": {
+                "tags": [
+                    "tiponovedad"
+                ],
+                "description": "get Tiponovedad by id",
+                "operationId": "TiponovedadController.Get",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "El id de la Tiponovedad a consultar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.Tiponovedad"
+                        }
+                    },
+                    "403": {
+                        "description": ":uid is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "tiponovedad"
+                ],
+                "description": "update the Tiponovedad",
+                "operationId": "TiponovedadController.Update",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "The objectid you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "The body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.Object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/.Object"
+                        }
+                    },
+                    "403": {
+                        "description": ":objectId is empty"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "tiponovedad"
+                ],
+                "description": "Borrar Tiponovedad",
+                "operationId": "TiponovedadController.Borrar Tiponovedad",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "description": "El ObjectId del objeto que se quiere borrar",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} ok"
+                    },
+                    "403": {
+                        "description": "objectId is empty"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        ".Object": {
+            "type": "object"
+        },
+        ".ObjectId": {
+            "type": "object"
+        },
+        "models.Actainicio": {
+            "title": "Actainicio",
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "$ref": "#/definitions/bson.ObjectId"
+                },
+                "contrato": {
+                    "type": "string"
+                },
+                "fechafin": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "fechainicio": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "vigencia": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Novedad": {
+            "title": "Novedad",
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "$ref": "#/definitions/bson.ObjectId"
+                },
+                "aclaracion": {
+                    "type": "string"
+                },
+                "camposaclaracion": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "camposmodificacion": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "camposmodificados": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "cedente": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "cesionario": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "contrato": {
+                    "type": "string"
+                },
+                "fechaadicion": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "fechacesion": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "fechaliquidacion": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "fechaprorroga": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "fecharegistro": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "fechareinicio": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "fechasolicitud": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "fechasuspension": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "fechaterminacionanticipada": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "motivo": {
+                    "type": "string"
+                },
+                "numeroactaentrega": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "numerocdp": {
+                    "type": "string"
+                },
+                "numerooficioestadocuentas": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "numerosolicitud": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "observacion": {
+                    "type": "string"
+                },
+                "periodosuspension": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "plazoactual": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "poliza": {
+                    "type": "string"
+                },
+                "tiempoprorroga": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "tiponovedad": {
+                    "type": "string"
+                },
+                "valoradicion": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "valorfinalcontrato": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "vigencia": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.PlantillaDocumento": {
+            "title": "PlantillaDocumento",
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "$ref": "#/definitions/bson.ObjectId"
+                },
+                "documentoasociado": {
+                    "type": "string"
+                },
+                "fechacreacion": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "plantilla": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Tiponovedad": {
+            "title": "Tiponovedad",
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "$ref": "#/definitions/bson.ObjectId"
+                },
+                "descripcion": {
+                    "type": "string"
+                },
+                "nombre": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "actainicio",
+            "description": "Operaciones Crud Actainicio\n"
+        },
+        {
+            "name": "tiponovedad",
+            "description": "Operaciones Crud Tiponovedad\n"
+        },
+        {
+            "name": "novedad",
+            "description": "Operaciones Crud Novedad\n"
+        },
+        {
+            "name": "plantilladocumento",
+            "description": "Operaciones Crud PlantillaDocumento\n"
+        }
+    ]
+}
