@@ -1,7 +1,7 @@
 package models
 
 import (
-	"administrativa_NoSQL_api/db"
+	"github.com/udistrital/administrativa_NoSQL_api/db"
 	"time"
 
 	"gopkg.in/mgo.v2"
