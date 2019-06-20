@@ -1,0 +1,23 @@
+[33mcommit 4769263b107ef5e674e10e26eb0b433df3a9db4a[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/Readme[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Andrea Ramiez <anlramirezs11@gmail.com>
+Date:   Thu Jun 20 13:56:17 2019 -0500
+
+    Se crea el readme ajustando este a los lineamientos planteados en el isse #1
+
+[33mcommit 15c637cbcbd79f3e9e3582a330f6e2722cf05dab[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Oscar Duarte <o.duarte7@gmail.com>
+Date:   Mon Sep 25 14:51:28 2017 -0500
+
+     se han agregado nuevos modelos y controladores
+
+[33mcommit d1eb83df3684dfde756ea97e8ef861832e63bb19[m
+Author: Oscar Duarte <o.duarte7@gmail.com>
+Date:   Wed Sep 13 15:18:50 2017 -0500
+
+    Se agrega el contenido del API crud no SQL de Administrativa
+
+[33mcommit ac56e7f390c30e4625173a8791c942fa30edb133[m
+Author: blacburn <andreysa0114@hotmail.com>
+Date:   Wed Sep 13 14:23:12 2017 -0500
+
+    Initial commit

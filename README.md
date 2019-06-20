@@ -46,6 +46,16 @@ Para instalar el proyecto realizar los siguientes pasos:
     go get
 ```
 
+## Configuración de la app
+
+* Se debe confirma si las credenciales para la conexión a la base de datos está correctamente:
+    - mongo_host = Puerto por el que está expuesto mongo.
+    - mongo_db= Nombre de la base de datos.
+    - mongo_user = Usuario que se creó en mongo para la conexión.
+    - mongo_pass = Contraseña del usuario.
+
+* El puerto por el que se expone la api **httpport = 8083**; si se cambia de puerto se debe editar la configuración en el [cliente](https://github.com/udistrital/novedades_cliente), especificamente la varible de entorno ARGO_NOSQL_SERVICE.
+
 ## Ejecución del proyecto
 
 * Ubicado en la raíz del proyecto, ejecutar:
@@ -63,4 +73,3 @@ Para instalar el proyecto realizar los siguientes pasos:
 
 * Para ver la documentación de swagger: [127.0.0.1:8083/swagger/](http://127.0.0.1:8083/swagger/)
     *Nota*: En el swagger sale un error, hacer caso omiso.
-
