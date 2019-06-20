@@ -1,8 +1,7 @@
 package main
 
 import (
-	_ "administrativa_NoSQL_api/routers"
-
+	_ "github.com/udistrital/administrativa_NoSQL_api/routers"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/plugins/cors"
 )

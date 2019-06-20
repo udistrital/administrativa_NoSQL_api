@@ -15,7 +15,6 @@ func Cursor(session *mgo.Session, Collection string) *mgo.Collection {
 }
 
 func GetSession() (*mgo.Session,error) {
-
 	mongoHost := beego.AppConfig.String("mongo_host")
 	mongoUser := beego.AppConfig.String("mongo_user")
 	mongoPassword := beego.AppConfig.String("mongo_pass")

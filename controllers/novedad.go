@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"administrativa_NoSQL_api/models"
-	"api/db"
+	"github.com/udistrital/administrativa_NoSQL_api/models"
+	"github.com/udistrital/administrativa_NoSQL_api/db"
 	"encoding/json"
 	"fmt"
 
