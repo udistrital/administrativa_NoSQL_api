@@ -26,6 +26,13 @@ Y crear una base de datos y subir el backup del proyecto: [backupArgo](https://d
 
 ## Configuración del Proyecto.
 
+### Opción 1
+Ejecutar desde la terminal 'go get repositorio':
+```shell 
+go get github.com/udistrital/administrativa_NoSQL_api.git
+```
+
+### Opción 2
 Para instalar el proyecto realizar los siguientes pasos:
 - Para clonar el proyecto en la carpeta local go/src/github.com/udistrital ir a la consola y ejecutar:
 ```shell 
