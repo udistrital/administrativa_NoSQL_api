@@ -69,7 +69,26 @@ Para instalar el proyecto realizar los siguientes pasos:
 
 ### Puertos
 
-* El servidor se expone en el puerto: 127.0.0.1:8083
+* El servidor se expone en el puerto: localhost:8083
 
-* Para ver la documentación de swagger: [127.0.0.1:8083/swagger/](http://127.0.0.1:8083/swagger/)
+* Para ver la documentación de swagger: [localhost:8083/swagger/](http://localhost:8083/swagger/)
     *Nota*: En el swagger sale un error, hacer caso omiso.
+
+
+### EndPoints
+
+Cada modelo tiene los metodos :
+* GetAll
+* GetOne
+* Put
+* Delete
+dependiendo de cualquiera usar lo define al momento de consumir el servicio, los endpoint a los cuales apuntar son los siguientes:
+
+
+||End Point|
+|----------------|------------------------|
+| **actainicio** | `[host de la maquina]:[puerto]/v1/actainicio` |
+| **novedad** | `[host de la maquina]:[puerto]/v1/novedad`|
+| **plantilladocumento** | `[host de la maquina]:[puerto]/v1/plantilladocumento` |
+| **tiponovedad** | `[host de la maquina]:[puerto]/v1/plantilla_minuta` |
+
