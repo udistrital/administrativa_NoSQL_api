@@ -19,6 +19,7 @@ paths:
       operationId: ActainicioController.GetAll
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.Actainicio'
         "403":
@@ -59,6 +60,7 @@ paths:
         type: string
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.Actainicio'
         "403":
@@ -77,6 +79,7 @@ paths:
         type: string
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.Actainicio'
         "403":
@@ -97,11 +100,12 @@ paths:
         description: The body
         required: true
         schema:
-          $ref: '#/definitions/.Object'
+          $ref: '#/definitions/models.Object'
       responses:
         "200":
+          description: ""
           schema:
-            $ref: '#/definitions/.Object'
+            $ref: '#/definitions/models.Object'
         "403":
           description: :objectId is empty
     delete:
@@ -128,6 +132,7 @@ paths:
       operationId: NovedadController.GetAll
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.Novedad'
         "403":
@@ -168,6 +173,7 @@ paths:
         type: string
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.Novedad'
         "403":
@@ -196,6 +202,7 @@ paths:
         type: string
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.Novedad'
         "403":
@@ -214,6 +221,7 @@ paths:
         type: string
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.Novedad'
         "403":
@@ -234,11 +242,12 @@ paths:
         description: The body
         required: true
         schema:
-          $ref: '#/definitions/.Object'
+          $ref: '#/definitions/models.Object'
       responses:
         "200":
+          description: ""
           schema:
-            $ref: '#/definitions/.Object'
+            $ref: '#/definitions/models.Object'
         "403":
           description: :objectId is empty
     delete:
@@ -265,6 +274,7 @@ paths:
       operationId: PlantillaDocumentoController.GetAll
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.PlantillaDocumento'
         "403":
@@ -300,6 +310,7 @@ paths:
         type: string
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.PlantillaDocumento'
         "403":
@@ -320,11 +331,12 @@ paths:
         description: The body
         required: true
         schema:
-          $ref: '#/definitions/.Object'
+          $ref: '#/definitions/models.Object'
       responses:
         "200":
+          description: ""
           schema:
-            $ref: '#/definitions/.Object'
+            $ref: '#/definitions/models.Object'
         "403":
           description: :objectId is empty
     delete:
@@ -351,6 +363,7 @@ paths:
       operationId: TiponovedadController.GetAll
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.Tiponovedad'
         "403":
@@ -386,6 +399,7 @@ paths:
         type: string
       responses:
         "200":
+          description: ""
           schema:
             $ref: '#/definitions/models.Tiponovedad'
         "403":
@@ -406,11 +420,12 @@ paths:
         description: The body
         required: true
         schema:
-          $ref: '#/definitions/.Object'
+          $ref: '#/definitions/models.Object'
       responses:
         "200":
+          description: ""
           schema:
-            $ref: '#/definitions/.Object'
+            $ref: '#/definitions/models.Object'
         "403":
           description: :objectId is empty
     delete:
@@ -430,9 +445,8 @@ paths:
         "403":
           description: objectId is empty
 definitions:
-  .Object:
-    type: object
-  .ObjectId:
+  bson.ObjectId:
+    title: ObjectId
     type: object
   models.Actainicio:
     title: Actainicio
@@ -444,10 +458,10 @@ definitions:
         type: string
       fechafin:
         type: string
-        format: string
+        format: datetime
       fechainicio:
         type: string
-        format: string
+        format: datetime
       vigencia:
         type: string
   models.Novedad:
@@ -480,31 +494,31 @@ definitions:
         type: string
       fechaadicion:
         type: string
-        format: string
+        format: datetime
       fechacesion:
         type: string
-        format: string
+        format: datetime
       fechaliquidacion:
         type: string
-        format: string
+        format: datetime
       fechaprorroga:
         type: string
-        format: string
+        format: datetime
       fecharegistro:
         type: string
-        format: string
+        format: datetime
       fechareinicio:
         type: string
-        format: string
+        format: datetime
       fechasolicitud:
         type: string
-        format: string
+        format: datetime
       fechasuspension:
         type: string
-        format: string
+        format: datetime
       fechaterminacionanticipada:
         type: string
-        format: string
+        format: datetime
       motivo:
         type: string
       numeroactaentrega:
@@ -541,6 +555,9 @@ definitions:
         format: int64
       vigencia:
         type: string
+  models.Object:
+    title: Object
+    type: object
   models.PlantillaDocumento:
     title: PlantillaDocumento
     type: object
@@ -551,7 +568,7 @@ definitions:
         type: string
       fechacreacion:
         type: string
-        format: string
+        format: datetime
       plantilla:
         type: string
   models.Tiponovedad:

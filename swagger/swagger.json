@@ -24,6 +24,7 @@
                 "operationId": "ActainicioController.GetAll",
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.Actainicio"
                         }
@@ -85,6 +86,7 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.Actainicio"
                         }
@@ -113,6 +115,7 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.Actainicio"
                         }
@@ -142,14 +145,15 @@
                         "description": "The body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/.Object"
+                            "$ref": "#/definitions/models.Object"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/.Object"
+                            "$ref": "#/definitions/models.Object"
                         }
                     },
                     "403": {
@@ -191,6 +195,7 @@
                 "operationId": "NovedadController.GetAll",
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.Novedad"
                         }
@@ -252,6 +257,7 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.Novedad"
                         }
@@ -294,6 +300,7 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.Novedad"
                         }
@@ -322,6 +329,7 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.Novedad"
                         }
@@ -351,14 +359,15 @@
                         "description": "The body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/.Object"
+                            "$ref": "#/definitions/models.Object"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/.Object"
+                            "$ref": "#/definitions/models.Object"
                         }
                     },
                     "403": {
@@ -400,6 +409,7 @@
                 "operationId": "PlantillaDocumentoController.GetAll",
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.PlantillaDocumento"
                         }
@@ -454,6 +464,7 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.PlantillaDocumento"
                         }
@@ -483,14 +494,15 @@
                         "description": "The body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/.Object"
+                            "$ref": "#/definitions/models.Object"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/.Object"
+                            "$ref": "#/definitions/models.Object"
                         }
                     },
                     "403": {
@@ -532,6 +544,7 @@
                 "operationId": "TiponovedadController.GetAll",
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.Tiponovedad"
                         }
@@ -586,6 +599,7 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
                             "$ref": "#/definitions/models.Tiponovedad"
                         }
@@ -615,14 +629,15 @@
                         "description": "The body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/.Object"
+                            "$ref": "#/definitions/models.Object"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/.Object"
+                            "$ref": "#/definitions/models.Object"
                         }
                     },
                     "403": {
@@ -657,10 +672,8 @@
         }
     },
     "definitions": {
-        ".Object": {
-            "type": "object"
-        },
-        ".ObjectId": {
+        "bson.ObjectId": {
+            "title": "ObjectId",
             "type": "object"
         },
         "models.Actainicio": {
@@ -675,11 +688,11 @@
                 },
                 "fechafin": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "fechainicio": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "vigencia": {
                     "type": "string"
@@ -727,39 +740,39 @@
                 },
                 "fechaadicion": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "fechacesion": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "fechaliquidacion": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "fechaprorroga": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "fecharegistro": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "fechareinicio": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "fechasolicitud": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "fechasuspension": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "fechaterminacionanticipada": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "motivo": {
                     "type": "string"
@@ -813,6 +826,10 @@
                 }
             }
         },
+        "models.Object": {
+            "title": "Object",
+            "type": "object"
+        },
         "models.PlantillaDocumento": {
             "title": "PlantillaDocumento",
             "type": "object",
@@ -825,7 +842,7 @@
                 },
                 "fechacreacion": {
                     "type": "string",
-                    "format": "string"
+                    "format": "datetime"
                 },
                 "plantilla": {
                     "type": "string"
