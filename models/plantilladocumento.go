@@ -1,9 +1,10 @@
 package models
 
 import (
-	"github.com/udistrital/novedades_api/db"
 	"fmt"
 	"time"
+
+	"github.com/udistrital/novedades_api/db"
 
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"

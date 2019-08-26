@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -16,7 +16,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -25,7 +25,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"],
         beego.ControllerComments{
             Method: "GetCV",
             Router: `/:contrato/:vigencia`,
@@ -34,7 +34,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"],
         beego.ControllerComments{
             Method: "Get",
             Router: `/:objectId`,
@@ -43,7 +43,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:objectId`,
@@ -52,7 +52,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:ActainicioController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:ActainicioController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:objectId`,
@@ -61,7 +61,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -70,7 +70,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -79,7 +79,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"],
         beego.ControllerComments{
             Method: "GetCV",
             Router: `/:contrato/:vigencia`,
@@ -88,7 +88,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"],
         beego.ControllerComments{
             Method: "GetCVT",
             Router: `/:contrato/:vigencia/:tiponovedad`,
@@ -97,7 +97,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"],
         beego.ControllerComments{
             Method: "Get",
             Router: `/:objectId`,
@@ -106,7 +106,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:objectId`,
@@ -115,7 +115,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:NovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:NovedadController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:objectId`,
@@ -124,7 +124,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:PlantillaDocumentoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:PlantillaDocumentoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:PlantillaDocumentoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:PlantillaDocumentoController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -133,7 +133,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:PlantillaDocumentoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:PlantillaDocumentoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:PlantillaDocumentoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:PlantillaDocumentoController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -142,7 +142,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:PlantillaDocumentoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:PlantillaDocumentoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:PlantillaDocumentoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:PlantillaDocumentoController"],
         beego.ControllerComments{
             Method: "Get",
             Router: `/:objectId`,
@@ -151,7 +151,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:PlantillaDocumentoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:PlantillaDocumentoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:PlantillaDocumentoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:PlantillaDocumentoController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:objectId`,
@@ -160,7 +160,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:PlantillaDocumentoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:PlantillaDocumentoController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:PlantillaDocumentoController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:PlantillaDocumentoController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:objectId`,
@@ -169,7 +169,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:TiponovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:TiponovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:TiponovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:TiponovedadController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: `/`,
@@ -178,7 +178,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:TiponovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:TiponovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:TiponovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:TiponovedadController"],
         beego.ControllerComments{
             Method: "Post",
             Router: `/`,
@@ -187,7 +187,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:TiponovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:TiponovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:TiponovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:TiponovedadController"],
         beego.ControllerComments{
             Method: "Get",
             Router: `/:objectId`,
@@ -196,7 +196,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:TiponovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:TiponovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:TiponovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:TiponovedadController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: `/:objectId`,
@@ -205,7 +205,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:TiponovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/administrativa_NoSQL_api/controllers:TiponovedadController"],
+    beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:TiponovedadController"] = append(beego.GlobalControllerRouter["github.com/udistrital/novedades_api/controllers:TiponovedadController"],
         beego.ControllerComments{
             Method: "Put",
             Router: `/:objectId`,

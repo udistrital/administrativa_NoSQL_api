@@ -1,10 +1,11 @@
 package controllers
 
 import (
-	"github.com/udistrital/novedades_api/db"
-	"github.com/udistrital/novedades_api/models"
 	"encoding/json"
 	"fmt"
+
+	"github.com/udistrital/novedades_api/db"
+	"github.com/udistrital/novedades_api/models"
 
 	"github.com/astaxie/beego"
 	_ "gopkg.in/mgo.v2"
