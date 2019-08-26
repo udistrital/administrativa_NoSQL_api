@@ -1,11 +1,12 @@
 package db
 
 import (
-	"gopkg.in/mgo.v2"
-	"github.com/astaxie/beego"
 	"fmt"
-	"gopkg.in/mgo.v2/bson"
 	"time"
+
+	"github.com/astaxie/beego"
+	"gopkg.in/mgo.v2"
+	"gopkg.in/mgo.v2/bson"
 )
 
 func Cursor(session *mgo.Session, Collection string) *mgo.Collection {
@@ -14,11 +15,11 @@ func Cursor(session *mgo.Session, Collection string) *mgo.Collection {
 	return c
 }
 
-func GetSession() (*mgo.Session,error) {
+func GetSession() (*mgo.Session, error) {
 	mongoHost := beego.AppConfig.String("mongo_host")
 	mongoUser := beego.AppConfig.String("mongo_user")
 	mongoPassword := beego.AppConfig.String("mongo_pass")
-	mongoDatabase := beego.AppConfig.String("mongo_db")
+	mongoDatabase := beego.AppConfig.String("mongo_db_auth")
 
 	info := &mgo.DialInfo{
 		Addrs:    []string{mongoHost},
@@ -32,17 +33,16 @@ func GetSession() (*mgo.Session,error) {
 	if err != nil {
 		fmt.Println("Helo this is an error!")
 		panic(err)
-	} else{
+	} else {
 		session.SetMode(mgo.Monotonic, true)
 	}
 
-	return session,err
+	return session, err
 }
-
 
 // Get All records from Collection
 func GetAll(session *mgo.Session, collection string) []bson.M {
-	c :=  Cursor(session, collection)
+	c := Cursor(session, collection)
 	defer session.Close()
 	var records []bson.M
 	err := c.Find(bson.M{}).All(&records)
