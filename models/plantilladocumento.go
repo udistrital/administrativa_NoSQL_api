@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/udistrital/administrativa_NoSQL_api/db"
+	"github.com/udistrital/novedades_api/db"
 	"fmt"
 	"time"
 
