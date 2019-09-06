@@ -1,9 +1,9 @@
 package main
 
 import (
-	_ "github.com/udistrital/administrativa_NoSQL_api/routers"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/plugins/cors"
+	_ "github.com/udistrital/novedades_api/routers"
 )
 
 func main() {

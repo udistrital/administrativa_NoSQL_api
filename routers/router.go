@@ -8,7 +8,7 @@
 package routers
 
 import (
-	"github.com/udistrital/administrativa_NoSQL_api/controllers"
+	"github.com/udistrital/novedades_api/controllers"
 
 	"github.com/astaxie/beego"
 )
