@@ -116,11 +116,17 @@ func (j *NovedadController) Delete() {
 // @router / [post]
 func (j *NovedadController) Post() {
 	var novedad models.Novedad
+	var alertErr models.Alert
+	alertas := append([]interface{}{"Response:"})
 	json.Unmarshal(j.Ctx.Input.RequestBody, &novedad)
 	fmt.Println(novedad)
 	session, _ := db.GetSession()
 	models.InsertNovedad(session, novedad)
-	j.Data["json"] = "insert success!"
+	alertErr.Type = "OK"
+	alertErr.Code = "200"
+	alertas = append(alertas, novedad)
+	alertErr.Body = novedad
+	j.Data["json"] = alertErr
 	j.ServeJSON()
 }
 
