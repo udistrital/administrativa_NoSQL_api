@@ -62,15 +62,25 @@ func (j *NovedadController) Get() {
 // @Failure 403 :uid is empty
 // @router /:contrato/:vigencia [get]
 func (j *NovedadController) GetCV() {
+	var alertErr models.Alert
+	alertas := append([]interface{}{"Response:"})
 	contrato := j.GetString(":contrato")
 	vigencia := j.GetString(":vigencia")
 	session, _ := db.GetSession()
 	if contrato != "" && vigencia != "" {
 		novedad, err := models.GetNovedadByContratoVigencia(session, contrato, vigencia)
 		if err != nil {
-			j.Data["json"] = err.Error()
+			alertErr.Type = "Error"
+			alertErr.Code = "400"
+			alertas = append(alertas, err.Error())
+			alertErr.Body = err.Error()
+			j.Data["json"] = alertErr
 		} else {
-			j.Data["json"] = novedad
+			alertErr.Type = "OK"
+			alertErr.Code = "200"
+			alertas = append(alertas, novedad)
+			alertErr.Body = novedad
+			j.Data["json"] = alertErr
 		}
 	}
 	j.ServeJSON()
