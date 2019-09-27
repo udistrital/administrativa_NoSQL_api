@@ -21,10 +21,16 @@ type NovedadController struct {
 // @Failure 403 :objectId is empty
 // @router / [get]
 func (j *NovedadController) GetAll() {
+	var alertErr models.Alert
+	alertas := append([]interface{}{"Response:"})
 	session, _ := db.GetSession()
 	obs := models.GetAllNovedads(session)
 	fmt.Println(obs)
-	j.Data["json"] = &obs
+	alertErr.Type = "OK"
+	alertErr.Code = "200"
+	alertas = append(alertas, obs)
+	alertErr.Body = obs
+	j.Data["json"] = alertErr
 	j.ServeJSON()
 }
 
