@@ -1,4 +1,4 @@
-# administrativa_NoSQL_api
+#  :no_entry: REPOSITORIO INACTIVO  - administrativa_NoSQL_api
 administrativa_NoSQL_api, CRUD para el negocio de novedades, el proyecto está programado en el lenguaje Go y creado con el [framework beego](https://beego.me/).
 
 ***Instlaciones Previas:***
